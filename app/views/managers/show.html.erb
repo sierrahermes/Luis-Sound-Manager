@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @manager.name %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @manager.format %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @manager.length %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @manager.size %>
+</p>
+
+<p>
+  <strong>Sizedescription:</strong>
+  <%= @manager.sizeDescription %>
+</p>
+
+<%= link_to 'Edit', edit_manager_path(@manager) %> |
+<%= link_to 'Back', managers_path %>

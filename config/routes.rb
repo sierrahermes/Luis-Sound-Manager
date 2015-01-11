@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :managers
+
+  resources :music_collections
+
   get 'admin/musicCollection'
 
   get 'welcome/homepage'
