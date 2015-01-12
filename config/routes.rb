@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'soundmanager/collection'
+
   resources :managers
 
   resources :music_collections

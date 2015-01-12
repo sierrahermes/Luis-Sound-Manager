@@ -1,0 +1,2 @@
+module SoundmanagerHelper
+end
