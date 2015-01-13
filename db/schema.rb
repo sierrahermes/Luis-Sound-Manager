@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150113140343) do
 
-  create_table "clients", force: :cascade do |t|
-    t.string   "first_name"
-    t.integer  "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "managers", force: :cascade do |t|
     t.string   "name"
@@ -30,13 +24,5 @@ ActiveRecord::Schema.define(version: 20150113140343) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "music_collections", force: :cascade do |t|
-    t.string   "name"
-    t.string   "format"
-    t.time     "length"
-    t.string   "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

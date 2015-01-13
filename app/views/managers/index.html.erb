@@ -23,7 +23,7 @@
         <%= manager.sizeDescription %></td>
         <td style='padding:15px'><%= link_to 'Show', manager %></td>
         <td style='padding:15px'><%= link_to 'Edit', edit_manager_path(manager) %></td>
-        <td style='padding:15px'><%= link_to 'Destroy', manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style='padding:15px'><%= link_to 'Destroy', manager, method: :delete, data: { confirm: 'Are you sure you want to destroy the record?' } %></td>
       </tr>
     <% end %>
   </tbody>
