@@ -3,12 +3,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
 
+# Use pg as the production database
 group :production do
   gem 'pg'
 end
 
+# Use sqlite3 as the development database
 group :development do
   gem 'sqlite3'
 end
