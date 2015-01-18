@@ -1,12 +1,12 @@
 class ManagersController < ApplicationController
   before_action :set_manager, only: [:show, :edit, :update, :destroy]
-
+helper_method :sort_column, :sort_direction
   # GET /managers
   # GET /managers.json
   def index
     #@managers = Manager.all
     #make list sortable
-    @managers = Manager.order(params[:sort])
+    @managers = Manager.order(sort_column + " " + sort_direction)
   end
 
   # GET /managers/1
@@ -77,5 +77,13 @@ class ManagersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def manager_params
       params.require(:manager).permit(:name, :format, :length, :size, :sizeDescription)
+    end
+
+    def sort_column
+      Manager.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
