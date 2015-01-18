@@ -54,10 +54,11 @@ class ManagersController < ApplicationController
   # DELETE /managers/1
   # DELETE /managers/1.json
   def destroy
-    @manager = Manager.find(params[:id])
+    #@manager = Manager.find(params[:id])
+    #@manager.destroy
     @manager.destroy
 
-    #@manager.destroy
+    
     respond_to do |format|
       format.html { redirect_to managers_url, notice: 'Music Collection was successfully destroyed.' }
       format.json { head :no_content }

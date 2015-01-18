@@ -18,6 +18,7 @@ end
 gem 'rails_12factor'
 
 #https://devcenter.heroku.com/articles/ruby-versions
+#adding the version fix the destroy bug on heroku
 ruby "2.0.0"
 
 # Use SCSS for stylesheets
