@@ -28,7 +28,7 @@ class ManagersController < ApplicationController
 
     respond_to do |format|
       if @manager.save
-        format.html { redirect_to @manager, notice: 'Manager was successfully created.' }
+        format.html { redirect_to @manager, notice: 'Successfully created.' }
         format.json { render :show, status: :created, location: @manager }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ManagersController < ApplicationController
   def update
     respond_to do |format|
       if @manager.update(manager_params)
-        format.html { redirect_to @manager, notice: 'Music Collection was successfully updated.' }
+        format.html { redirect_to @manager, notice: 'Successfully updated.' }
         format.json { render :show, status: :ok, location: @manager }
       else
         format.html { render :edit }
@@ -54,13 +54,14 @@ class ManagersController < ApplicationController
   # DELETE /managers/1
   # DELETE /managers/1.json
   def destroy
-    #@manager = Manager.find(params[:id])
-    #@manager.destroy
+    @manager = Manager.find(params[:id])
+    @test=@manager.name
+
     @manager.destroy
 
-    
+
     respond_to do |format|
-      format.html { redirect_to managers_url, notice: 'Music Collection was successfully destroyed.' }
+      format.html { redirect_to managers_url, notice: ' ' + @test + ' was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -16,25 +16,22 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <br><%= f.label :"format (CD, Tape, MP3, 8TRACK, ETC)" %>:<br>
-    <%= f.text_field :format %>
+    <br><%= f.label :"Select Format" %>:<br>
+    <%= f.select :format, options_for_select(%w[CD Tape mp3 8TRACK]) %>
+
   </div>
   <div class="field">
     <br><%= f.label :"length (hh:ss)" %>:<br>
     <%= f.time_select :length %>
   </div>
   <div class="field">
-    <br><%= f.label :"size (number Only)" %>:<br>
+    <br><%= f.label :"Collection size " %>:<br>
     <%= f.number_field :size %>
-  </div>
-  <div class="field">
-    <br><%= f.label :"Write: kb, mb, gb, or tb" %><br>
-    <%= f.text_field :sizeDescription %>
+    <%= f.select :sizeDescription, options_for_select(%w[kb mb gb tb]) %>
+</div>
 
-
-
-  </div>
-  <br><div class="actions">
+  <br>
+  <div class="actions">
     <%= f.submit %>
   </div><br>
 <% end %>
