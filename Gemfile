@@ -17,9 +17,13 @@ end
 #see https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 gem 'rails_12factor'
 
+#https://devcenter.heroku.com/articles/bundler-windows-gemfile
 #https://devcenter.heroku.com/articles/ruby-versions
-#adding the version fix the destroy bug on heroku
+#adding the ruby version fixed the destroy bug on heroku
 ruby "2.0.0"
+
+#https://devcenter.heroku.com/articles/bundler-windows-gemfile
+gem 'rails', '4.2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
