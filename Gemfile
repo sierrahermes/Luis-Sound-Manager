@@ -14,6 +14,12 @@ group :development do
   gem 'sqlite3'
 end
 
+#see https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
+
+#https://devcenter.heroku.com/articles/ruby-versions
+ruby "2.0.0p196"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
