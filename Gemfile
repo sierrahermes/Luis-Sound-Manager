@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+#https://devcenter.heroku.com/articles/bundler-windows-gemfile
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
@@ -22,8 +22,10 @@ gem 'rails_12factor'
 #adding the ruby version fixed the destroy bug on heroku
 ruby "2.0.0"
 
-#https://devcenter.heroku.com/articles/bundler-windows-gemfile
-gem 'rails', '4.2.0'
+#setup a production web server
+#https://devcenter.heroku.com/articles/ruby-default-web-server
+#https://devcenter.heroku.com/articles/rails-unicorn
+#gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
